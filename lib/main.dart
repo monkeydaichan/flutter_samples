@@ -11,8 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
           bodyText1: TextStyle(
             fontSize: 24.0,
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: DatetimePage(title: 'Flutter Demo Home Page'),
+      home: DatetimePage(),
     );
   }
 }

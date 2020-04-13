@@ -5,9 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:flutter_samples/bloc.dart';
 
 class DatetimePage extends StatelessWidget {
-  DatetimePage({Key key, this.title}) : super(key: key);
+  DatetimePage({Key key}) : super(key: key);
 
-  final String title;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,10 +21,6 @@ class DatetimePage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Theme.of(context).primaryColor,
           elevation: 0.0,
-          title: Text(
-            title,
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
         ),
         body: ChangeNotifierProvider<TimeStore>(
           create: (_) => TimeStore(),
