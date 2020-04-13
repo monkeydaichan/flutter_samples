@@ -20,13 +20,4 @@ class TimeStore with ChangeNotifier {
     _isShowTimePicker = !_isShowTimePicker;
     notifyListeners();
   }
-
-  iconLoading() {
-    print("icon tapped");
-    // _isIconLoading = true;
-    // Duration(seconds: 5);
-    // Navigator.pushNamed(context, "/payment");
-    // _isIconLoading = false;
-    // notifyListeners();
-  }
 }

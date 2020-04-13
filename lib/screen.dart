@@ -9,23 +9,15 @@ class DatetimePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScopeNode currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus) {
-          currentFocus.unfocus();
-        }
-      },
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Theme.of(context).primaryColor,
-          elevation: 0.0,
-        ),
-        body: ChangeNotifierProvider<TimeStore>(
-          create: (_) => TimeStore(),
-          child: DateTimeWidget(),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Theme.of(context).primaryColor,
+        elevation: 0.0,
+      ),
+      body: ChangeNotifierProvider<TimeStore>(
+        create: (_) => TimeStore(),
+        child: DateTimeWidget(),
       ),
     );
   }
