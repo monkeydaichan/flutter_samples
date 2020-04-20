@@ -3,22 +3,17 @@ import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({Key key, this.stepNo}) : super(key: key);
+
   final int stepNo;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        onTap: () {
-          FocusScopeNode currentFocus = FocusScope.of(context);
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.unfocus();
-          }
-        },
-        child: Scaffold(
-          appBar: AppBar(),
-          body: (stepNo == 1)
-              ? Container1()
-              : (stepNo == 2) ? Container2() : Container0(),
-        ));
+    return Scaffold(
+      appBar: AppBar(),
+      // stepNoの値によって表示させるWidgetを変化させる
+      body: (stepNo == 1)
+          ? Container1()
+          : (stepNo == 2) ? Container2() : Container0(),
+    );
   }
 }
 
@@ -125,6 +120,7 @@ class Container2 extends StatelessWidget {
   }
 }
 
+// ステップインディケーターのクラスを作成
 class StepProgress extends StatelessWidget {
   StepProgress({Key key, this.currentStep}) : super(key: key);
   final int currentStep;
@@ -134,12 +130,17 @@ class StepProgress extends StatelessWidget {
       padding: EdgeInsets.all(16.0),
       child: Container(
         child: StepProgressIndicator(
+          // トータルのインディケーターの数を指定
           totalSteps: 3,
+          // 今どのステップにいるのか
           currentStep: currentStep,
           size: 36,
+          // 入力が完了したときのインディケーターの色
           selectedColor: Colors.black,
+          // 未入力のインディケーターの色
           unselectedColor: Colors.grey[200],
           customStep: (index, color, _) => color == Colors.black
+              // 入力が完了したときのインディケーターをカスタマイズ
               ? Container(
                   decoration: new BoxDecoration(
                     color: Colors.black,
@@ -150,6 +151,7 @@ class StepProgress extends StatelessWidget {
                     color: Colors.white,
                   ),
                 )
+              // 編集中のインディケーターをカスタマイズ
               : (index == currentStep)
                   ? Container(
                       decoration: new BoxDecoration(
@@ -161,6 +163,7 @@ class StepProgress extends StatelessWidget {
                         color: Colors.white,
                       ),
                     )
+                  // 未入力のインディケーターをインディケーター
                   : Container(
                       decoration: new BoxDecoration(
                         color: color,
