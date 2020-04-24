@@ -119,6 +119,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
+  - Firebase/Auth
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_auth_web (from `.symlinks/plugins/firebase_auth_web/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
@@ -199,6 +200,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+PODFILE CHECKSUM: d20e5b8f864087de8f98e54898d8c7bfa661f6cb
 
 COCOAPODS: 1.9.0
