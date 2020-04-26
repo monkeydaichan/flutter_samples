@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/auth.dart';
 import 'package:flutter_samples/route.dart';
-import 'package:flutter_samples/screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {

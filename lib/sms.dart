@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/services.dart';
 
-class MainPage extends StatelessWidget {
-  MainPage({Key key, this.title}) : super(key: key);
+class SmsPage extends StatelessWidget {
+  SmsPage({Key key, this.title}) : super(key: key);
 
   final String title;
   @override
@@ -24,7 +24,6 @@ class MainPage extends StatelessWidget {
           elevation: 0.0,
         ),
         body: SmsPageBody(),
-        // ),
       ),
     );
   }
@@ -78,7 +77,6 @@ class PhoneNumberInputWidget extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    final usermodel = Provider.of<UserModel>(context);
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
